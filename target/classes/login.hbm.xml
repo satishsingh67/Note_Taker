@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.note.model.Login" table="login_details">
+		<id name="userId" column="user_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="firstName" column="first_name" type="string"></property>
+		<property name="lastName" column="last_name" type="string"></property>
+		<property name="emailId" column="email_id" type="string"></property>
+		<property name="password" column="password" type="string"></property>
+		<property name="createDate" type="java.util.Date"></property>
+		<property name="updateDate" type="java.util.Date"></property>
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" extends="json-default">
+
+		<action name="product" class="prod">
+			<result name="success">Welcome.jsp</result>
+		</action>
+
+		<!-- for fetch -->
+		<action name="fetch" method="fetchNotes" class="noteAction">
+			<result name="success" type="json">
+				<param name="root">resultMap</param>
+			</result>
+			<result name="failed" type="json">
+				<param name="root">resultMap</param>
+			</result>
+		</action>
+
+		<!-- for Add -->
+		<action name="add" method="addNotes" class="noteAction">
+			<result name="success" type="json">
+				<param name="root">resultMap</param>
+			</result>
+			<result name="failed" type="json">
+				<param name="root">resultMap</param>
+			</result>
+		</action>
+
+		<!-- for edit -->
+		<action name="edit" method="editNotes" class="noteAction">
+			<result name="success" type="json">
+				<param name="root">resultMap</param>
+			</result>
+			<result name="failed" type="json">
+				<param name="root">resultMap</param>
+			</result>
+		</action>
+
+		<!-- for delete -->
+		<action name="delete" method="deleteNotes" class="noteAction">
+			<result name="success" type="json">
+				<param name="root">resultMap</param>
+			</result>
+			<result name="failed" type="json">
+				<param name="root">resultMap</param>
+			</result>
+		</action>
+		
+		<!-- for login -->
+		<action name="login" method="login" class="loginAction">
+			<result name="success" type="json">
+				<param name="root">resultMap</param>
+			</result>
+			<result name="failed" type="json">
+				<param name="root">resultMap</param>
+			</result>
+		</action>
+		
+		<!-- for logout -->
+		<action name="logOut" method="logOut" class="loginAction">
+			<result name="success" type="json">
+				<param name="root">resultMap</param>
+			</result>
+			<result name="failed" type="json">
+				<param name="root">resultMap</param>
+			</result>
+		</action>
+		
+		
+		<!-- for register -->
+		<action name="register" method="register" class="registerAction">
+			<result name="success" type="json">
+				<param name="root">resultMap</param>
+			</result>
+			<result name="failed" type="json">
+				<param name="root">resultMap</param>
+			</result>
+		</action>
+		
+		<!-- for reset password -->
+		<action name="forgetPassword" method="forgetPassword" class="resetAction">
+			<result name="success" type="json">
+				<param name="root">resultMap</param>
+			</result>
+			<result name="failed" type="json">
+				<param name="root">resultMap</param>
+			</result>
+		</action>	
+	</package>
+</struts>      
